@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ---------- RESET & BASE ---------- */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0F1115;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- WRAPPER ---------- */
+.screen-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0F1115;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(34, 211, 238, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(124, 58, 237, 0.06) 0%, transparent 40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ---------- CARD CONTAINER ---------- */
+.auth-card {
+  width: 100%;
+  max-width: 940px;
+  height: 600px;
+  background: #181B1F;
+  backdrop-filter: blur(20px);
+  border: 1px solid #2D3038;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(34, 211, 238, 0.05);
+  display: flex;
+  overflow: hidden;
+}
+
+/* ---------- LEFT HERO SIDE ---------- */
+.hero-side {
+  flex: 1;
+  background: linear-gradient(145deg, #1A1D24 0%, #111317 100%);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #2D3038;
+}
+
+.brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.2);
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+
+.tag-pill {
+  display: inline-block;
+  background: rgba(34, 211, 238, 0.1);
+  color: #67e8f9;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  margin-bottom: 16px;
+}
+
+.hero-main h1 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.hero-main h1 span {
+  background: linear-gradient(90deg, #22d3ee, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-sub {
+  color: #9CA3AF;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Feature Grid */
+.features-container {
+  display: flex;
+  gap: 14px;
+}
+
+.mini-feature {
+  flex: 1;
+  background: #1E2228;
+  border: 1px solid #2D3038;
+  padding: 14px;
+  border-radius: 12px;
+  transition: border-color 0.2s;
+}
+
+.mini-feature:hover {
+  border-color: #4B5563;
+}
+
+.mini-feature-icon {
+  width: 28px;
+  height: 28px;
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.mini-feature h4 {
+  font-size: 12px;
+  color: #F3F4F6;
+  margin-bottom: 3px;
+  margin-top: 0;
+}
+
+.mini-feature p {
+  font-size: 10px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.hero-bottom-text {
+  font-size: 10px;
+  color: #6B7280;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+/* ---------- RIGHT FORM SIDE ---------- */
+.form-side {
+  flex: 1;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #181B1F;
+}
+
+.form-header {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.form-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.form-header p {
+  font-size: 12.5px;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+/* Toggle Switch */
+.tab-switcher {
+  display: flex;
+  background: #111317;
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  border: 1px solid #2D3038;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 9px;
+  background: transparent;
+  border: none;
+  color: #6B7280;
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #2D3038;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.input-group label {
+  font-size: 11.5px;
+  color: #D1D5DB;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.forgot-pass {
+  font-size: 11px;
+  color: #22d3ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-pass:hover {
+  text-decoration: underline;
+}
+
+.custom-input {
+  width: 100%;
+  background: #111317;
+  border: 1px solid #2D3038;
+  padding: 11px 14px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-input::placeholder {
+  color: #4B5563;
+}
+
+.custom-input:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+}
+
+/* Password Eye Toggle */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper .custom-input {
+  padding-right: 40px;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #6B7280;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.eye-btn:hover {
+  color: #D1D5DB;
+}
+
+/* Checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  accent-color: #22d3ee;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 11.5px;
+  color: #9CA3AF;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #2D3038;
+}
+
+.divider p {
+  font-size: 10px;
+  color: #6B7280;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Social Login (Google) */
+.social-login {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.social-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #111317;
+  border: 1px solid #2D3038;
+  color: #D1D5DB;
+  padding: 11px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+  background: #1E2228;
+  border-color: #4B5563;
+}
+
+/* Footer Note */
+.form-footer-note {
+  text-align: center;
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+.form-footer-note span {
+  color: #22d3ee;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.form-footer-note span:hover {
+  text-decoration: underline;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 850px) {
+  .auth-card {
+    flex-direction: column;
+    height: auto;
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+
+  .hero-side {
+    padding: 30px;
+    border-right: none;
+    border-bottom: 1px solid #2D3038;
+  }
+
+  .hero-bottom-text {
+    display: none;
+  }
+
+  .form-side {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .screen-wrapper {
+    padding: 12px;
+  }
+
+  .auth-card {
+    border-radius: 16px;
+  }
+
+  .hero-side {
+    padding: 24px 20px;
+  }
+
+  .hero-main h1 {
+    font-size: 28px;
+  }
+
+  .form-side {
+    padding: 24px 20px;
+  }
+
+  .form-header h2 {
+    font-size: 22px;
+  }
+}

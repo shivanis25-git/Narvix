@@ -1,0 +1,34 @@
+# Environment variables and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup
+*.bak
+*.save
+
+# All local backup files
+**/*backup*
+**/*.bak
+
+# Empty accidental files
+/backend/backend@1.0.0
+/backend/nodemon
