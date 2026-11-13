@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Dashboard from './Dashboard';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+
 function App() {
   const [isSignIn, setIsSignIn] = useState(true);
   const [showDashboard, setShowDashboard] = useState(
@@ -58,7 +60,7 @@ function App() {
           };
 
       const response = await fetch(
-        `http://localhost:5000${endpoint}`,
+        `${API_BASE_URL}${endpoint}`,
         {
           method: 'POST',
           headers: {
@@ -96,7 +98,7 @@ function App() {
     setIsResetLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/forgot-password', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/forgot-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.trim().toLowerCase() }),
@@ -137,7 +139,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/auth/reset-password/${encodeURIComponent(resetToken)}`,
+        `${API_BASE_URL}/api/auth/reset-password/${encodeURIComponent(resetToken)}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -182,7 +184,7 @@ function App() {
           setIsLoading(true);
 
           try {
-            const result = await fetch('http://localhost:5000/api/auth/google', {
+            const result = await fetch(`${API_BASE_URL}/api/auth/google`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ credential: response.credential }),
@@ -248,7 +250,7 @@ function App() {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/api/projects/public/${publicId}`
+          `${API_BASE_URL}/api/projects/public/${publicId}`
         );
 
         const data = await response.json();
